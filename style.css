@@ -1,38 +1,99 @@
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('fonts/AtkinsonHyperlegibleNext-Bold.otf') format('opentype');
-  font-weight: bold;
+  src: url('./fonts/AtkinsonHyperlegibleNext-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('fonts/AtkinsonHyperlegibleNext-BoldItalic.otf') format('opentype');
-  font-weight: bold;
+  src: url('./fonts/AtkinsonHyperlegibleNext-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('fonts/AtkinsonHyperlegibleNext-ExtraBold.otf') format('opentype');
-  font-weight: 800; /* or use "extra-bold" depending on how you want to label it */
+  src: url('./fonts/AtkinsonHyperlegibleNext-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('fonts/AtkinsonHyperlegibleNext-Regular.otf') format('opentype');
-  font-weight: normal;
+  src: url('./fonts/AtkinsonHyperlegibleNext-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
 }
 
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('fonts/AtkinsonHyperlegibleNext-Light.otf') format('opentype');
-  font-weight: 300; /* light */
+  src: url('./fonts/AtkinsonHyperlegibleNext-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('fonts/AtkinsonHyperlegibleNext-SemiBold.otf') format('opentype');
-  font-weight: 600; /* semi-bold */
+  src: url('./fonts/AtkinsonHyperlegibleNext-SemiBoldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./fonts/AtkinsonHyperlegibleNext-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./fonts/AtkinsonHyperlegibleNext-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./fonts/AtkinsonHyperlegibleNext-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./fonts/AtkinsonHyperlegibleNext-ExtraBoldItalic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./fonts/AtkinsonHyperlegibleNext-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./fonts/AtkinsonHyperlegibleNext-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./fonts/AtkinsonHyperlegibleNext-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('./fonts/AtkinsonHyperlegibleNext-ExtraLightItalic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
 }
 
 * {
@@ -45,6 +106,7 @@ body {
   overflow: hidden;
   font-size: 1rem;
   font-family: 'Atkinson Hyperlegible Next', sans-serif;
+  font-weight: 400;
 }
 
 .light {
@@ -150,7 +212,6 @@ body {
   border-radius: 1rem;
   color: black;
   text-align: center;
-  font-weight: bold;
   transition: background-color 0.3s, transform 0.3s;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
