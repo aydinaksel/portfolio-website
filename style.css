@@ -1,37 +1,37 @@
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('/fonts/AtkinsonHyperlegibleNext-Bold.otf') format('opentype');
+  src: url('fonts/AtkinsonHyperlegibleNext-Bold.otf') format('opentype');
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('/fonts/AtkinsonHyperlegibleNext-BoldItalic.otf') format('opentype');
+  src: url('fonts/AtkinsonHyperlegibleNext-BoldItalic.otf') format('opentype');
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('/fonts/AtkinsonHyperlegibleNext-ExtraBold.otf') format('opentype');
+  src: url('fonts/AtkinsonHyperlegibleNext-ExtraBold.otf') format('opentype');
   font-weight: 800; /* or use "extra-bold" depending on how you want to label it */
 }
 
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('/fonts/AtkinsonHyperlegibleNext-Regular.otf') format('opentype');
+  src: url('fonts/AtkinsonHyperlegibleNext-Regular.otf') format('opentype');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('/fonts/AtkinsonHyperlegibleNext-Light.otf') format('opentype');
+  src: url('fonts/AtkinsonHyperlegibleNext-Light.otf') format('opentype');
   font-weight: 300; /* light */
 }
 
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('/fonts/AtkinsonHyperlegibleNext-SemiBold.otf') format('opentype');
+  src: url('fonts/AtkinsonHyperlegibleNext-SemiBold.otf') format('opentype');
   font-weight: 600; /* semi-bold */
 }
 
@@ -142,7 +142,6 @@ body {
 }
 
 .portfolio__link {
-  font-weight: 300;
   backdrop-filter: blur(8px);
   background: rgba(255, 255, 255, 0.8);
   padding: 1.5rem 1.5rem;
