@@ -96,6 +96,10 @@
   font-style: italic;
 }
 
+html, body {
+  height: 100%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -103,7 +107,6 @@
 }
 
 body {
-  overflow: hidden;
   font-size: 1rem;
   font-family: 'Atkinson Hyperlegible Next', sans-serif;
   font-weight: 400;
@@ -119,12 +122,17 @@ body {
   background: black;
 }
 
+:root {
+  --vh: 100vh;
+}
+
 .background {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   z-index: -1;
   filter: brightness(90%);
   background: linear-gradient(45deg, #C9E4FF, #D6F4FF, #FFD6DC, #FFE0CC);
@@ -176,26 +184,19 @@ body {
   align-items: center;
   width: 100%;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 .portfolio__container {
   text-align: center;
-  //background: rgba(255 255, 255, 0.1);
-  //backdrop-filter: blur(20px);
   padding: 2rem;
-  //border-radius: 1.68rem;
   max-width: 560px;
   width: 90%;
-  //box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .portfolio__title {
   font-size: 1.5rem;
   margin-bottom: 0.5em;
-}
-
-.portfolio__tagline {
-  margin-bottom: 2rem;
 }
 
 .portfolio__links {
@@ -216,15 +217,10 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio__link:hover {
-  background-color: rgba(173, 216, 255);
-}
-
+.portfolio__link:hover,
+.portfolio__link:active,
 :focus-visible {
   background-color: rgba(173, 216, 255);
-  outline: -webkit-focus-ring-color auto 0px;
+  outline: none;
 }
 
-.portfolio__link:active {
-  background-color: rgba(173, 216, 255);
-}
