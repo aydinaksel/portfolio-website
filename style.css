@@ -96,10 +96,6 @@
   font-style: italic;
 }
 
-html, body {
-  height: 100%;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -150,6 +146,7 @@ body {
 
 .circle {
   position: absolute;
+  overflow: hidden;
   border-radius: 50%;
   filter: blur(150px);
   background: rgba(173, 216, 255);
@@ -189,14 +186,14 @@ body {
 
 .portfolio__container {
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   max-width: 560px;
-  width: 90%;
+  width: 100%;
 }
 
 .portfolio__title {
   font-size: 1.5rem;
-  margin-bottom: 0.5em;
+  margin-bottom: 2rem;
 }
 
 .portfolio__links {
@@ -210,7 +207,7 @@ body {
   padding: 1.5rem 1.5rem;
   margin: 0.5em 0;
   text-decoration: none;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   color: black;
   text-align: center;
   transition: background-color 0.3s, transform 0.3s;
