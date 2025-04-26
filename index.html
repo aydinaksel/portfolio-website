@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aydin Aksel Portfolio Site</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="smiley.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aydin's Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
-<body class="light">
+
+<body>
   <div class="background">
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
+    <div class="orb-1"></div>
+    <div class="orb-2"></div>
+    <div class="orb-3"></div>
+    <div class="orb-4"></div>
+    <div class="orb-5"></div>
   </div>
 
-  <main>
-    <div class="portfolio__wrapper">
-      <div class="portfolio__container">
-        <h1 class="portfolio__title">Aydin Aksel</h1>
-        <div class="portfolio__links">
-          <a class="portfolio__link" href="https://linkedin.com/in/aydinaksel" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a class="portfolio__link" href="https://github.com/aydinaksel" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a class="portfolio__link" href="https://trailhead.salesforce.com/me/aydinaksel" target="_blank" rel="noopener noreferrer">Salesforce Trailhead</a>
-        </div>
+  <div class="container">
+    <header>
+      <h1>Aydin Aksel</h1>
+      <h2>My Experience</h2>
+    </header>
+
+    <main>
+      <div class="app-grid" id="app-grid">
+        <!-- Injected with JavaScript -->
       </div>
-    </div>
-  </main>
+    </main>
 
-  <script src="script.js"></script>
+    <footer>
+      <p>© <span id="currentYear"></span> Aydin Aksel • Built with vibes</p>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
-</html>
 
+</html>

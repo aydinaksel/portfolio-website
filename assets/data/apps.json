@@ -1,0 +1,159 @@
+[
+  {
+    "name": "GitHub",
+    "url": "https://github.com/aydinaksel",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/github.svg",
+    "tooltip": "Version control & project management"
+  },
+  {
+    "name": "Salesforce",
+    "url": "https://trailhead.salesforce.com/me/aydinaksel",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/salesforce.svg",
+    "tooltip": "Customer relationship management (CRM)"
+  },
+  {
+    "name": "Obsidian",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/obsidian.svg",
+    "tooltip": "Customer relationship management (CRM)"
+  },
+  {
+    "name": "Markdown",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/markdown.svg",
+    "tooltip": "Customer relationship management (CRM)"
+  },
+  {
+    "name": "Linux",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/linux.svg",
+    "tooltip": "Customer relationship management (CRM)"
+  },
+  {
+    "name": "WordPress",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/wordpress.svg",
+    "tooltip": "Customer relationship management (CRM)"
+  },
+  {
+    "name": "Webflow",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/webflow.svg",
+    "tooltip": "Customer relationship management (CRM)"
+  },
+  {
+    "name": "Postman",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/postman.svg",
+    "tooltip": "Customer relationship management (CRM)"
+  },
+  {
+    "name": "Aircall",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/aircall.svg",
+    "tooltip": "Customer relationship management (CRM)"
+  },
+  {
+    "name": "Retool",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/retool.svg",
+    "tooltip": "Customer relationship management (CRM)"
+  },
+  {
+    "name": "Stripe",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/stripe.svg",
+    "tooltip": "Customer relationship management (CRM)"
+  },
+  {
+    "name": "Git",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/git.svg",
+    "tooltip": "Version control system"
+  },
+  {
+    "name": "Neovim",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/neovim.svg",
+    "tooltip": "My primary code editor"
+  },
+  {
+    "name": "HTML",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/html5.svg",
+    "tooltip": "Structure & semantics"
+  },
+  {
+    "name": "CSS",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/css3.svg",
+    "tooltip": "Styling & animations"
+  },
+  {
+    "name": "n8n",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/n8n.svg",
+    "tooltip": "styling & animations"
+  },
+  {
+    "name": "Zapier",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/zapier.svg",
+    "tooltip": "styling & animations"
+  },
+  {
+    "name": "Google Sheets",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/googlesheets.svg",
+    "tooltip": "styling & animations"
+  },
+  {
+    "name": "Google Apps Script",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/googleappsscript.svg",
+    "tooltip": "styling & animations"
+  },
+  {
+    "name": "Snowlflake",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/snowflake.svg",
+    "tooltip": "styling & animations"
+  },
+  {
+    "name": "Go",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/go.svg",
+    "tooltip": "styling & animations"
+  },
+  {
+    "name": "JavaScript",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/javascript.svg",
+    "tooltip": "Interactive functionality"
+  },
+  {
+    "name": "Python",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/python.svg",
+    "tooltip": "Data processing & automation"
+  },
+  {
+    "name": "Inkscape",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/inkscape.svg",
+    "tooltip": "Vector graphics design"
+  },
+  {
+    "name": "Notion",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/notion.svg",
+    "tooltip": "Vector graphics design"
+  },
+  {
+    "name": "Slack",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/slack.svg",
+    "tooltip": "Vector graphics design"
+  },
+  {
+    "name": "GIMP",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/gimp.svg",
+    "tooltip": "Image editing & manipulation"
+  },
+  {
+    "name": "Docker",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/docker.svg",
+    "tooltip": "Containerization"
+  },
+  {
+    "name": "Figma",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/figma.svg",
+    "tooltip": "UI/UX design tool"
+  },
+  {
+    "name": "PostgreSQL",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/postgresql.svg",
+    "tooltip": "Relational database"
+  },
+  {
+    "name": "Rust",
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/rust.svg",
+    "tooltip": "Relational database"
+  }
+]

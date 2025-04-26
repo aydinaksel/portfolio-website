@@ -1,0 +1,279 @@
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/AtkinsonHyperlegibleNext-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/AtkinsonHyperlegibleNext-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/AtkinsonHyperlegibleNext-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/AtkinsonHyperlegibleNext-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/AtkinsonHyperlegibleNext-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/AtkinsonHyperlegibleNext-SemiBoldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/AtkinsonHyperlegibleNext-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/AtkinsonHyperlegibleNext-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/AtkinsonHyperlegibleNext-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/AtkinsonHyperlegibleNext-ExtraBoldItalic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/AtkinsonHyperlegibleNext-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/AtkinsonHyperlegibleNext-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/AtkinsonHyperlegibleNext-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/AtkinsonHyperlegibleNext-ExtraLightItalic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Atkinson Hyperlegible Next', sans-serif;
+  font-weight: 400;
+  color: white;
+  background-color: #0F0E17;
+  overflow-x: hidden;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  z-index: 1;
+  position: relative;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.app-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /*cursor: pointer;*/
+  position: relative;
+}
+
+.app-icon-container {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  margin-bottom: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.app-icon-container:hover {
+  background: rgba(255, 255, 255, 0.33);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.app-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.app-icon-container:hover .app-icon {
+  transform: scale(1.05);
+}
+
+.app-label {
+  font-size: 0.85rem;
+  margin-top: 4px;
+  font-weight: 500;
+  width: 100%;
+  /* Match this to your grid item width or adjust as needed */
+  max-width: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.download-button {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, bottom 0.3s ease;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/*
+.app-item:hover .download-button {
+  opacity: 1;
+  bottom: -24px;
+}
+
+.download-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+*/
+
+.tooltip {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease, top 0.3s ease;
+  pointer-events: none;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/*
+.app-item:hover .tooltip {
+  opacity: 1;
+  top: -36px;
+}
+*/
+
+header {
+  padding: 20px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.error-message {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
