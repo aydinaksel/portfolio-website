@@ -6,9 +6,12 @@
   bottom: 0;
   overflow: hidden;
   z-index: -1;
-  background: linear-gradient(135deg, #0F0E17 0%, #0F0E17 100%);
+  /*background: linear-gradient(135deg, #0F0E17 0%, #0F0E17 100%);*/
+  filter: blur(80px);
+  background-image: url("/assets/images/fire_large.webp");
 }
 
+/*
 .background::before,
 .background::after,
 .orb-1,
@@ -85,6 +88,7 @@
   height: 55vw;
   animation: wave3 32s infinite alternate ease-in-out;
 }
+*/
 
 /* Smooth wave-like animations for swirling effect */
 @keyframes wave1 {
