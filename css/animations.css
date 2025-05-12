@@ -12,7 +12,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/assets/bedge-grunge.png") repeat;
+  background: url("../assets/bedge-grunge.png") repeat;
   opacity: 0.5;
   pointer-events: none;
   mix-blend-mode: overlay;
@@ -98,5 +98,41 @@
     height: 40vw;
     top: 40%;
     left: 30%;
+  }
+}
+
+@media (min-width: 640px) {
+  .blob {
+    filter: blur(50px);
+    opacity: 0.35;
+  }
+}
+
+@media (min-width: 768px) {
+  .blob {
+    filter: blur(60px);
+    opacity: 0.4;
+    animation: none;
+  }
+
+  .blob:nth-child(1) {
+    width: 120vw;
+    height: 120vw;
+    top: -70%;
+    left: -20%;
+  }
+
+  .blob:nth-child(2) {
+    width: 120vw;
+    height: 120vw;
+    bottom: -70%;
+    right: -20%;
+  }
+
+  .blob:nth-child(3) {
+    width: 80vw;
+    height: 80vw;
+    top: 30%;
+    left: -30%;
   }
 }
