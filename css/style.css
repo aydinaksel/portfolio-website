@@ -1,3 +1,29 @@
+:root {
+  --color-bg: #050505;
+  --color-text: #ffffff;
+  --color-primary: #ff3366;
+  --color-secondary: #3366ff;
+  --color-tertiary: #33ddff;
+  --color-accent: #ffcc00;
+  --card-radius: 16px;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.5);
+  --cubic-default: cubic-bezier(0.625, 0.05, 0, 1);
+  --duration-default-double: 1.6s;
+  --duration-default-onehalf: 1.2s;
+  --duration-default: 0.8s;
+  --duration-default-half: 0.4s;
+  --animation-default-double: var(--duration-default-double) var(--cubic-default);
+  --animation-default-onehalf: var(--duration-default-onehalf) var(--cubic-default);
+  --duration-default-quarter: 0.2s;
+  --animation-default: var(--duration-default) var(--cubic-default);
+  --animation-default-half: var(--duration-default-half) var(--cubic-default);
+  --animation-default-quarter: var(--duration-default-quarter) var(--cubic-default);
+  --animation-ease: 0.2s ease;
+  --animation-ease-double: 0.4s ease;
+}
+
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
   src: url('/fonts/AtkinsonHyperlegibleNext-Regular.woff2') format('woff2');
@@ -106,7 +132,7 @@ body {
   font-size: 1rem;
   font-family: 'Atkinson Hyperlegible Next', sans-serif;
   font-weight: 400;
-  color: black;
+  color: white;
   background-color: #0F0E17;
   overflow-x: hidden;
   min-height: 100vh;
@@ -136,14 +162,13 @@ h2 {
   margin-bottom: 2rem;
   text-align: center;
   font-weight: 400;
-  opacity: 0.9;
 }
 
 .app-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
 }
 
 .app-item {
@@ -162,33 +187,38 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  border-radius: var(--card-radius);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
   margin-bottom: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.app-icon-container:hover {
-  background: rgba(255, 255, 255, 0.33);
-  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .app-icon {
+  display: inline-block;
+  transition: transform var(--animation-default), color var(--animation-default);
+}
+
+.app-icon svg {
   width: 40px;
   height: 40px;
-  object-fit: contain;
-  z-index: 2;
-  transition: transform 0.3s ease;
+  fill: currentColor;
+}
+
+.app-icon-container {
+  transition: transform var(--animation-default);
 }
 
 .app-icon-container:hover .app-icon {
-  transform: scale(1.05);
+  color: var(--hover-color);
+}
+
+.app-icon-container:hover {
+  transform: scale(0.95);
 }
 
 .app-label {
@@ -285,7 +315,7 @@ footer {
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease-in-out;
-  color: black;
+  color: white;
 }
 
 .social-links a:hover {

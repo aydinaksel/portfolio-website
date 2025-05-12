@@ -3,157 +3,188 @@
     "name": "GitHub",
     "url": "https://github.com/aydinaksel",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/github.svg",
-    "tooltip": "Version control & project management"
+    "tooltip": "Version control & project management",
+    "color": "#181717"
   },
   {
     "name": "Salesforce",
     "url": "https://trailhead.salesforce.com/me/aydinaksel",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/salesforce.svg",
-    "tooltip": "Customer relationship management (CRM)"
+    "tooltip": "Customer relationship management (CRM)",
+    "color": "#00A1E0"
   },
   {
     "name": "Obsidian",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/obsidian.svg",
-    "tooltip": "Customer relationship management (CRM)"
+    "tooltip": "Customer relationship management (CRM)",
+    "color": "#7C3AED"
   },
   {
     "name": "Markdown",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/markdown.svg",
-    "tooltip": "Customer relationship management (CRM)"
+    "tooltip": "Customer relationship management (CRM)",
+    "color": "#000000"
   },
   {
     "name": "Linux",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/linux.svg",
-    "tooltip": "Customer relationship management (CRM)"
+    "tooltip": "Customer relationship management (CRM)",
+    "color": "#FCC624"
   },
   {
     "name": "WordPress",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/wordpress.svg",
-    "tooltip": "Customer relationship management (CRM)"
+    "tooltip": "Customer relationship management (CRM)",
+    "color": "#21759B"
   },
   {
     "name": "Webflow",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/webflow.svg",
-    "tooltip": "Customer relationship management (CRM)"
+    "tooltip": "Customer relationship management (CRM)",
+    "color": "#146EF5"
   },
   {
     "name": "Postman",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/postman.svg",
-    "tooltip": "Customer relationship management (CRM)"
+    "tooltip": "Customer relationship management (CRM)",
+    "color": "#FF6C37"
   },
   {
     "name": "Aircall",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/aircall.svg",
-    "tooltip": "Customer relationship management (CRM)"
+    "tooltip": "Customer relationship management (CRM)",
+    "color": "#00B388"
   },
   {
     "name": "Retool",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/retool.svg",
-    "tooltip": "Customer relationship management (CRM)"
+    "tooltip": "Customer relationship management (CRM)",
+    "color": "#3D3D3D"
   },
   {
     "name": "Stripe",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/stripe.svg",
-    "tooltip": "Customer relationship management (CRM)"
+    "tooltip": "Customer relationship management (CRM)",
+    "color": "#635BFF"
   },
   {
     "name": "Git",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/git.svg",
-    "tooltip": "Version control system"
+    "tooltip": "Version control system",
+    "color": "#F05032"
   },
   {
     "name": "Neovim",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/neovim.svg",
-    "tooltip": "My primary code editor"
+    "tooltip": "My primary code editor",
+    "color": "#57A143"
   },
   {
     "name": "HTML",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/html5.svg",
-    "tooltip": "Structure & semantics"
+    "tooltip": "Structure & semantics",
+    "color": "#E34F26"
   },
   {
     "name": "CSS",
-    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/css3.svg",
-    "tooltip": "Styling & animations"
+    "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/css.svg",
+    "tooltip": "Styling & animations",
+    "color": "#663399"
   },
   {
     "name": "n8n",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/n8n.svg",
-    "tooltip": "styling & animations"
+    "tooltip": "styling & animations",
+    "color": "#EA4B71"
   },
   {
     "name": "Zapier",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/zapier.svg",
-    "tooltip": "styling & animations"
+    "tooltip": "styling & animations",
+    "color": "#FF4F00"
   },
   {
     "name": "Google Sheets",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/googlesheets.svg",
-    "tooltip": "styling & animations"
+    "tooltip": "styling & animations",
+    "color": "#34A853"
   },
   {
     "name": "Google Apps Script",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/googleappsscript.svg",
-    "tooltip": "styling & animations"
+    "tooltip": "styling & animations",
+    "color": "#4285F4"
   },
   {
-    "name": "Snowlflake",
+    "name": "Snowflake",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/snowflake.svg",
-    "tooltip": "styling & animations"
+    "tooltip": "styling & animations",
+    "color": "#29B5E8"
   },
   {
     "name": "Go",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/go.svg",
-    "tooltip": "styling & animations"
+    "tooltip": "styling & animations",
+    "color": "#00ADD8"
   },
   {
     "name": "JavaScript",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/javascript.svg",
-    "tooltip": "Interactive functionality"
+    "tooltip": "Interactive functionality",
+    "color": "#F7DF1E"
   },
   {
     "name": "Python",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/python.svg",
-    "tooltip": "Data processing & automation"
+    "tooltip": "Data processing & automation",
+    "color": "#3776AB"
   },
   {
     "name": "Inkscape",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/inkscape.svg",
-    "tooltip": "Vector graphics design"
+    "tooltip": "Vector graphics design",
+    "color": "#000000"
   },
   {
     "name": "Notion",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/notion.svg",
-    "tooltip": "Vector graphics design"
+    "tooltip": "Vector graphics design",
+    "color": "#000000"
   },
   {
     "name": "Slack",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/slack.svg",
-    "tooltip": "Vector graphics design"
+    "tooltip": "Vector graphics design",
+    "color": "#4A154B"
   },
   {
     "name": "GIMP",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/gimp.svg",
-    "tooltip": "Image editing & manipulation"
+    "tooltip": "Image editing & manipulation",
+    "color": "#5C5543"
   },
   {
     "name": "Docker",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/docker.svg",
-    "tooltip": "Containerization"
+    "tooltip": "Containerization",
+    "color": "#2496ED"
   },
   {
     "name": "Figma",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/figma.svg",
-    "tooltip": "UI/UX design tool"
+    "tooltip": "UI/UX design tool",
+    "color": "#F24E1E"
   },
   {
     "name": "PostgreSQL",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.8.0/postgresql.svg",
-    "tooltip": "Relational database"
+    "tooltip": "Relational database",
+    "color": "#4169E1"
   },
   {
     "name": "Rust",
     "icon": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/rust.svg",
-    "tooltip": "Relational database"
+    "tooltip": "Relational database",
+    "color": "#000000"
   }
 ]
