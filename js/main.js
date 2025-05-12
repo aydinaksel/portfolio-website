@@ -1,7 +1,7 @@
 function generateAppGrid() {
     const appGrid = document.getElementById('app-grid');
 
-    fetch('../assets/data/apps.json')
+    fetch('assets/data/apps.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
