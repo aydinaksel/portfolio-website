@@ -10,16 +10,20 @@
   --card-border: rgba(255, 255, 255, 0.1);
   --card-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.5);
   --cubic-default: cubic-bezier(0.625, 0.05, 0, 1);
-  --duration-default-double: 1.6s;
-  --duration-default-onehalf: 1.2s;
-  --duration-default: 0.8s;
-  --duration-default-half: 0.4s;
+  --duration-default-quadruple: calc(var(--duration-default) * 4);
+  --duration-default-double: calc(var(--duration-default) * 2);
+  --duration-default-onehalf: calc(var(--duration-default) * 1.5);
+  --duration-default: 1s;
+  --duration-default-half: calc(var(--duration-default) * 0.5);
+  --duration-default-quarter: calc(var(--duration-default) * 0.25);
+  --duration-default-slowest: 0.1s;
+  --animation-default-quadruple: var(--duration-default-quadruple) var(--cubic-default);
   --animation-default-double: var(--duration-default-double) var(--cubic-default);
   --animation-default-onehalf: var(--duration-default-onehalf) var(--cubic-default);
-  --duration-default-quarter: 0.2s;
   --animation-default: var(--duration-default) var(--cubic-default);
   --animation-default-half: var(--duration-default-half) var(--cubic-default);
   --animation-default-quarter: var(--duration-default-quarter) var(--cubic-default);
+  --animation-default-slowest: var(--duration-default-slowest) var(--cubic-default);
   --animation-ease: 0.2s ease;
   --animation-ease-double: 0.4s ease;
 }
@@ -128,8 +132,52 @@
   padding: 0;
 }
 
-body {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 3rem 0 1rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.25rem
+}
+
+p,
+ul,
+ol {
+  margin-bottom: 2rem;
   font-size: 1rem;
+}
+
+ul {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+strong {
+  font-weight: 800;
+}
+
+body {
+  line-height: 1.75;
+  font-size: 16px;
   font-family: 'Atkinson Hyperlegible Next', sans-serif;
   font-weight: 400;
   color: white;
@@ -140,29 +188,15 @@ body {
   position: relative;
 }
 
-.container {
-  max-width: 1200px;
+.content {
+  max-width: 70ch;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 0 2rem;
   z-index: 1;
   position: relative;
 }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
 
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  font-weight: 400;
-}
 
 .app-grid {
   display: grid;
@@ -200,7 +234,7 @@ h2 {
 
 .app-icon {
   display: inline-block;
-  transition: transform var(--animation-default), color var(--animation-default);
+  transition: transform var(--animation-default-quadruple), color var(--animation-default-quadruple);
 }
 
 .app-icon svg {
@@ -210,14 +244,16 @@ h2 {
 }
 
 .app-icon-container {
-  transition: transform var(--animation-default);
+  transition: transform var(--animation-default-quadruple);
 }
 
 .app-icon-container:hover .app-icon {
+  transition: transform var(--animation-default-slowest), color var(--animation-default-slowest);
   color: var(--hover-color);
 }
 
 .app-icon-container:hover {
+  transition: transform var(--animation-default-slowest), color var(--animation-default-slowest);
   transform: scale(0.95);
 }
 
@@ -226,7 +262,6 @@ h2 {
   margin-top: 4px;
   font-weight: 500;
   width: 100%;
-  /* Match this to your grid item width or adjust as needed */
   max-width: 90px;
   white-space: nowrap;
   overflow: hidden;
@@ -287,14 +322,20 @@ h2 {
 }
 */
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 header {
-  padding: 20px 0;
+  margin-top: 5rem;
+  text-align: center;
 }
 
 footer {
   text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 60px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   font-size: 0.9rem;
   opacity: 0.7;
 }
@@ -329,4 +370,17 @@ footer {
   border-radius: 8px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+@media (hover: none) and (pointer: coarse) {
+  *:hover {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .app-icon-container:hover .app-icon {
+    transition: none !important;
+    color: inherit !important;
+  }
 }

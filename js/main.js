@@ -13,8 +13,9 @@ function generateAppGrid() {
                 const appItem = document.createElement('div');
                 appItem.classList.add('app-item');
 
-                const iconContainer = document.createElement('div');
+                const iconContainer = document.createElement('a');
                 iconContainer.classList.add('app-icon-container');
+                iconContainer.href = `./${app.name.toLowerCase()}.html`;
 
                     fetch(app.icon)
                       .then(res => res.text())

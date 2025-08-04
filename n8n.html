@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aydin's Portfolio</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/animations.css">
+</head>
+
+<body>
+  <div class="background">
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+  </div>
+
+  <div class="content">
+    <header>
+      <h1>n8n</h1>
+    </header>
+
+    <main>
+      <h2>Projects</h2>
+      <h3>Automated Salesforce Object Snapshots in Snowflake with n8n</h3>
+      <p><em>Metadata-driven ETL, bulk API orchestration, and snapshotting using n8n, Salesforce Bulk API v2, and
+          Snowflake.</em></p>
+
+      <h4>Overview</h4>
+      <p>I built a robust, end-to-end ETL workflow in <strong>n8n</strong> that automatically extracts Salesforce
+        records via the Bulk API v2, transforms them, and ingests them into Snowflake as time-stamped snapshots. The
+        workflow is completely metadata-driven—no hard-coded field lists—and handles large data volumes with pagination,
+        conditional logic, and error-resilient loops.</p>
+
+      <h4>Key Highlights</h4>
+
+      <h5>Dynamic Metadata Introspection</h5>
+      <ul>
+        <li>Fetches Salesforce object schema (describe endpoint) and enumerates every field.</li>
+        <li>Filters out compound fields and deduplicates to drive all downstream SQL generation.</li>
+      </ul>
+
+      <h5>Automated Table Generation</h5>
+      <ul>
+        <li>Dynamically builds a staging table (all <code>VARCHAR</code> columns) and a typed snapshot table with
+          appropriate types (BOOLEAN, TIMESTAMP, NUMBER, etc.) via JavaScript in an n8n Code node.</li>
+        <li>Maps Salesforce types to Snowflake types programmatically and names snapshot tables with precise timestamps
+          for auditability (e.g., <code>salesforce_db.snapshots.property_snapshot_20250730123045</code>).</li>
+      </ul>
+
+      <h5>Salesforce Bulk API v2 Integration</h5>
+      <ul>
+        <li>Creates and manages Bulk Query Jobs, polling until completion with Switch + Wait loops.</li>
+        <li>Handles all job states (<em>InProgress</em>, <em>UploadComplete</em>, <em>Aborted</em>, <em>Failed</em>,
+          <em>JobComplete</em>) gracefully.
+        </li>
+        <li>Paginates large result sets using the <code>sforce-locator</code> header to retrieve batches (up to 50,000
+          records per request) until exhaustion.</li>
+      </ul>
+
+      <h5>Resilient Data Ingestion Pipeline</h5>
+      <ul>
+        <li>Writes each CSV batch to disk, stages it to a Snowflake internal stage, and uses <code>COPY INTO</code> with
+          configurable file formats.</li>
+        <li>Loads into staging and applies a single <code>INSERT … SELECT</code> that uses <code>TRY_TO_*</code>
+          functions (e.g., <code>TRY_TO_TIMESTAMP</code>, <code>TRY_TO_BOOLEAN</code>) to safely cast and cleanse data,
+          preventing bulk-load failures.</li>
+      </ul>
+
+      <h5>Error Handling &amp; Graceful Termination</h5>
+      <ul>
+        <li>No-op and conditional “Gracefully Stop” nodes ensure clean termination on failure or after completion.</li>
+        <li>Shell commands (e.g., <code>rm -r …</code>, <code>mkdir -p …</code>) manage local directory state, making
+          the workflow restartable and idempotent.</li>
+      </ul>
+
+      <h4>Technology Stack &amp; Skills Demonstrated</h4>
+      <ul>
+        <li>n8n orchestration (HTTP Request, Code, Switch, Wait, Execute Command, file I/O)</li>
+        <li>Salesforce Bulk API v2 &amp; SOQL</li>
+        <li>Snowflake SQL, internal stages, dynamic table creation</li>
+        <li>JavaScript for dynamic SQL generation</li>
+        <li>CSV handling and shell scripting</li>
+        <li>Error-resilient, metadata-driven integration logic</li>
+      </ul>
+
+      <h4>Why This Matters for Your Project</h4>
+      <p>This workflow demonstrates the ability to architect complex, metadata-driven integrations and ETL pipelines
+        entirely within n8n—eliminating brittle manual scripts and reducing maintenance. Whether your goal is Salesforce
+        data warehousing, automated snapshotting, or multi-step cloud integration, I deliver scalable, resilient
+        solutions that adapt as schema and data volumes evolve.</p>
+      <h3>Automated Version Control & Documentation Sync for n8n Workflows</h3>
+      <h3>Incremental Salesforce → Snowflake ETL Automation with n8n</h3>
+
+    </main>
+
+    <footer>
+      <ul class="social-links">
+        <li><a href="https://www.linkedin.com/in/aydinaksel" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </li>
+        <li><a href="https://www.salesforce.com/trailblazer/aydinaksel" target="_blank"
+            rel="noopener noreferrer">Trailhead</a></li>
+        <li><a href="https://www.github.com/aydinaksel" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+      <p>&#169; <span id="currentYear"></span> Aydin Aksel • Built with vibes</p>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
