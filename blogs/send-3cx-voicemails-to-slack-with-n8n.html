@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send 3CX Voicemails to Slack with n8n</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+
+<body>
+  <div class="background">
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+  </div>
+
+  <div class="content">
+    <header>
+      <h1>Send 3CX Voicemails to Slack with n8n</h1>
+    </header>
+
+    <main>
+      <p>If your team relies on 3CX for voice communication and Slack for internal messaging, bridging the two can
+        massively improve responsiveness. At <strong>Plum Guide</strong>, we automated the process of sending voicemails
+        from our 3CX system directly into dedicated Slack channels using <strong>n8n</strong> — a powerful, open-source
+        workflow automation tool.</p>
+
+      <p>Here’s how the automation works — and how you can set it up for your team too.</p>
+
+      <section>
+        <h2>🎯 The Goal</h2>
+        <p>We wanted a way to automatically:</p>
+        <ul>
+          <li>Monitor a shared email inbox where 3CX voicemails land.</li>
+          <li>Download and extract key voicemail details (caller number, recipient, time, etc.).</li>
+          <li>Push that info — along with the voicemail audio file — into Slack, routed to the appropriate
+            queue/channel.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🛠️ The n8n Workflow Overview</h2>
+        <p>This workflow consists of just <strong>two core nodes</strong>:</p>
+
+        <h3>1. <code>Email Trigger (IMAP)</code></h3>
+        <ul>
+          <li><strong>Node:</strong> <code>Email Trigger (IMAP)</code></li>
+          <li><strong>Purpose:</strong> Connects to our "3CX Voicemails" mailbox via IMAP and listens for new emails.
+          </li>
+          <li><strong>Config Highlights:</strong>
+            <ul>
+              <li>Mailbox: <code>3CX Voicemails</code></li>
+              <li>Downloads attachments (usually <code>.wav</code> or <code>.mp3</code> files)</li>
+              <li>No post-processing — n8n handles everything else</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>2. <code>Send Slack Message</code></h3>
+        <ul>
+          <li><strong>Node:</strong> <code>Send Slack Message</code></li>
+          <li><strong>Purpose:</strong> Sends a message to the correct Slack channel based on the recipient queue (e.g.,
+            800 = Care Queue).</li>
+          <li><strong>Config Highlights:</strong>
+            <ul>
+              <li><strong>Channel Routing:</strong></li>
+              <pre><code>$json.textPlain.match(/To:\s*"(.*?)"/)?.[1] === "800" ? "C09162M5DMZ" : "801" ? "C090X9WEYMV" :
+                  null</code></pre>
+              <li><strong>Initial Comment:</strong></li>
+              <blockquote>
+                <p>Voicemail from +15125075506 on Monday, 28 July 2025 22:48:38</p>
+              </blockquote>
+              <li><strong>Attachment:</strong> The voicemail file is uploaded to Slack so that the team can listen to it
+                directly.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>📬 A Sample Email Input</h2>
+        <p>Here's a snippet of the email body our workflow parses:</p>
+        <pre><code>You have received a new voice mail from "+15125075506"
+
+            From:+15125075506
+            To: "800" - "Care Queue"
+            Received:"Monday, 28 July 2025 22:48:38"
+            Duration:"00:01:15"
+            File:"vmail_+15125075506_800_20250728214838"</code></pre>
+
+        <p>This is parsed using simple RegEx inside the Slack node parameters.</p>
+      </section>
+
+      <section>
+        <h2>💡 Why This Matters</h2>
+        <p>Before this automation:</p>
+        <ul>
+          <li>Voicemails sat unread in a shared inbox.</li>
+          <li>There was a delay between receiving the message and someone noticing it.</li>
+        </ul>
+
+        <p>Now:</p>
+        <ul>
+          <li>Voicemails are instantly visible in Slack.</li>
+          <li>They're routed to the <strong>correct queue</strong>.</li>
+          <li>The relevant team can act on it immediately.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🔐 Security Considerations</h2>
+        <ul>
+          <li>The IMAP credentials are stored securely in n8n’s credential manager.</li>
+          <li>Slack webhook credentials are also scoped and isolated to only this workflow.</li>
+          <li>Only internal channels are used; no data is exposed outside our org.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>📦 Bonus: Easy to Extend</h2>
+        <p>You can easily extend this workflow by:</p>
+        <ul>
+          <li>Translating the voicemail with a speech-to-text API.</li>
+          <li>Auto-assigning follow-ups in your CRM.</li>
+          <li>Archiving voicemails to cloud storage (e.g., Google Drive, S3).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>✅ Wrap-Up</h2>
+        <p>This automation saves our team hours each week and ensures faster response times to customer calls. It's
+          lightweight, low-code, and highly customizable.</p>
+
+        <p><strong>Want to try it yourself?</strong><br>
+          If you're using 3CX and Slack, give n8n a shot — and feel free to fork our workflow structure.</p>
+      </section>
+    </main>
+
+    <footer>
+      <ul class="social-links">
+        <li><a href="https://www.linkedin.com/in/aydinaksel" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </li>
+        <li><a href="https://www.salesforce.com/trailblazer/aydinaksel" target="_blank"
+            rel="noopener noreferrer">Trailhead</a></li>
+        <li><a href="https://www.github.com/aydinaksel" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+      <p>&#169; <span id="currentYear"></span> Aydin Aksel • Built with vibes</p>
+    </footer>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

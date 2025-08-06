@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto-Create Salesforce Tasks from 3CX Call Logs</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+
+<body>
+  <div class="background">
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+  </div>
+
+  <div class="content">
+    <header>
+      <h1>Auto-Create Salesforce Tasks from 3CX Call Logs</h1>
+    </header>
+
+    <main>
+      <p>At <strong>Plum Guide</strong>, we receive daily call reports from our 3CX system, delivered as email
+        attachments. Manually processing these logs into Salesforce tasks was tedious and error-prone. So, we automated
+        the entire process using <strong>n8n</strong> — from email parsing to task creation in Salesforce.</p>
+
+      <section>
+        <h2>🎯 The Goal</h2>
+        <p>We wanted to:</p>
+        <ul>
+          <li>Automatically extract call data from 3CX call log reports (CSV attachments)</li>
+          <li>Filter for only answered, non-internal, agent-involved calls</li>
+          <li>Match calls with Salesforce users based on extension</li>
+          <li>Create a completed Salesforce task for each call</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🧠 Workflow Breakdown</h2>
+
+        <h3>1. <code>Email Trigger (IMAP)</code></h3>
+        <p>Listens for new emails in the <strong>“3CX Call Logs”</strong> mailbox and downloads attached CSV reports.
+        </p>
+
+        <h3>2. <code>Extract from File</code></h3>
+        <p>Parses the CSV file and converts each row into structured JSON for downstream logic.</p>
+
+        <h3>3. <code>Edit Fields</code></h3>
+        <p>Maps column names from the report to cleaner JSON field names like <code>call_id</code>,
+          <code>call_time</code>, <code>from</code>, <code>to</code>, etc.
+        </p>
+
+        <h3>4. <code>Remove Call Metrics</code></h3>
+        <p>Filters out any non-call rows (like summary metrics) that don’t include a <code>from</code> field.</p>
+
+        <h3>5. <code>Sort</code> & <code>Remove Duplicates</code></h3>
+        <p>Ensures that only the most recent, unique calls by <code>call_id</code> are processed.</p>
+
+        <h3>6. <code>Keep Answered Calls</code> & <code>Keep Agent Calls</code></h3>
+        <p>Filters for calls that were answered and involved agents (based on extension regex match).</p>
+
+        <h3>7. <code>Exclude Internal Calls</code></h3>
+        <p>Removes calls marked with the direction <code>Internal</code>, which we don’t need tasks for.</p>
+
+        <h3>8. <code>Extract Extension</code></h3>
+        <p>Extracts extension numbers from the call metadata based on whether the call was inbound or outbound.</p>
+
+        <h3>9. <code>Get User Extension</code></h3>
+        <p>Queries Salesforce to get a list of users and their extensions.</p>
+
+        <h3>10. <code>Merge</code></h3>
+        <p>Combines the call data with the Salesforce user data using extension matching to get the correct
+          <code>OwnerId</code>.
+        </p>
+
+        <h3>11. <code>Create Tasks</code></h3>
+        <p>Uses an authenticated Salesforce API call to create a completed task with:
+        <ul>
+          <li>A descriptive subject like <code>Inbound Call Answered from X to Y</code></li>
+          <li>Timestamp, caller ID, and full call details</li>
+        </ul>
+        </p>
+      </section>
+
+      <section>
+        <h2>🔄 Manual Run Option</h2>
+        <p>This workflow also supports manual execution via a test trigger that pulls reports from a Google Drive folder
+          — useful for debugging or retroactive runs.</p>
+      </section>
+
+      <section>
+        <h2>🔐 Security Considerations</h2>
+        <ul>
+          <li>Uses OAuth2 credentials for secure Salesforce access</li>
+          <li>Google Drive and IMAP access is scoped to service accounts</li>
+          <li>All PII remains within our infrastructure</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>📈 Impact</h2>
+        <p>This automation eliminated hours of manual Salesforce data entry and ensured consistent tracking of sales and
+          support calls across the company.</p>
+      </section>
+
+      <section>
+        <h2>✅ Wrap-Up</h2>
+        <p>With n8n, we connected email, file parsing, filtering logic, user lookup, and Salesforce API calls into one
+          cohesive workflow. If you're using 3CX and Salesforce, this setup can save your team significant time while
+          improving visibility and accountability.</p>
+      </section>
+    </main>
+
+    <footer>
+      <ul class="social-links">
+        <li><a href="https://www.linkedin.com/in/aydinaksel" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </li>
+        <li><a href="https://www.salesforce.com/trailblazer/aydinaksel" target="_blank"
+            rel="noopener noreferrer">Trailhead</a></li>
+        <li><a href="https://www.github.com/aydinaksel" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+      <p>&#169; <span id="currentYear"></span> Aydin Aksel • Built with vibes</p>
+    </footer>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

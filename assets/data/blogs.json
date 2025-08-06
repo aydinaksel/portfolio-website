@@ -1,0 +1,24 @@
+[
+  {
+    "image": "https://lh3.googleusercontent.com/Ml2dmf1pT0jpg1P-1E35doGcAftKWfo7rKMC9cQbXg0qz_C8jIAM37DFRt9osJHMe2eDlGJoswFhrTc13sZUx1mHEcirrI7zoQDk0Ph4IVVcQnfbaBbC",
+    "title": "Auto-Create Salesforce Tasks from 3CX Call Logs",
+    "description": "Parse 3CX call log reports and instantly create Salesforce tasks for answered calls with agent and direction filtering — fully automated with n8n.",
+    "platforms": [
+      "3CX",
+      "Salesforce",
+      "n8n"
+    ],
+    "slug": "auto-create-salesforce-tasks-from-3cx-call-logs"
+  },
+  {
+    "image": "https://lh3.googleusercontent.com/Ml2dmf1pT0jpg1P-1E35doGcAftKWfo7rKMC9cQbXg0qz_C8jIAM37DFRt9osJHMe2eDlGJoswFhrTc13sZUx1mHEcirrI7zoQDk0Ph4IVVcQnfbaBbC",
+    "title": "Send 3CX Voicemails to Slack with n8n",
+    "description": "Automatically forward 3CX voicemails to the right Slack channel with attachments and caller info using this simple n8n workflow.",
+    "platforms": [
+      "Slack",
+      "3CX",
+      "n8n"
+    ],
+    "slug": "send-3cx-voicemails-to-slack-with-n8n"
+  }
+]
